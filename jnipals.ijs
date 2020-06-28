@@ -5,7 +5,7 @@ col =: 4 : 0
     (<(a: ; x)) { y
 )
 
-mul =: +/ . *
+dot =: +/ . *
 
 nipals =: 3 : 0
     components=.a: NB empty boxed list
@@ -14,7 +14,7 @@ nipals =: 3 : 0
     mat=. y
     while. d > threshhold do. 
     v=. 0 col mat
-    u=.( (|: mat) mul v) % (u (|: mul) u)
+    u=.( (|: dot) dot v) % (u (|: dot) u)
     end.
     
     components
